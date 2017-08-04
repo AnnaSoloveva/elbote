@@ -1,0 +1,134 @@
+header{
+    background-size: cover;
+    padding: 22px 0 0;
+    border-bottom: 3px solid @color-red;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/header-bg-noseason.jpg");
+    .logo{
+        padding-left: 49px;
+        max-width: 318px;
+    }
+    >.container-fluid{
+        .flex(space-between, center, center, nowrap);
+        >div{flex: 1}
+    }
+    .phone{
+        font-family: @font-WarnockPro;
+        white-space: nowrap;
+        margin: -17px 0 -7px;
+        a{
+            font-size: 41px;
+            text-decoration: none;
+            font-weight: 900;
+            color: #000;
+        }
+        span{
+            font-size: 24px;
+            font-weight: 400;
+            margin-right: 8px;
+        }
+    }
+    .address{
+        font-size: 21px;
+        white-space: nowrap;
+        color: @color-red;
+    }
+    .schedule{
+        flex: 2!important;
+        max-width: 490px;
+        white-space: nowrap;
+        dl{
+            margin-left: -103px;
+            dt{
+                font-size: 18px;
+                color: @color-red;
+                margin-bottom: 7px;
+            }
+            dd{
+                font-size: 24px;
+                color: #000;
+                line-height: 1em;
+            }
+        }
+        p{margin-bottom: 5px}
+    }
+    .btn{
+        position: relative;
+        border-radius: 22px;
+        background: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-top: 26px;
+        font-size: 16px;
+        padding: 10px 18px 7px 50px;
+        &:before{
+            position: absolute;
+            left: -2px;
+            top: -4px;
+            background: url("../img/icon-pen.png")no-repeat 0 0;
+            width: 47px;
+            height: 47px;
+            content: "";
+        }
+    }
+    .navbar{
+        min-height: 39px;
+        border-radius: 0;
+        margin: 4px 0 0;
+        .top{background: #fff}
+    }
+    @media (max-width: 1110px) {
+        .phone a{font-size: 35px}
+        .address{font-size: 19px}
+        .schedule{max-width: 460px}
+        #mainMenu a{font-size: 14px!important;}
+    }
+    @media (max-width: @screen-sm-max) {
+        padding: 10px 0 0;
+        .logo{padding-left: 26px; max-width: 290px}
+        #mainMenu a{font-size: 17px!important;}
+        .navbar{
+            min-height: 0;
+            height: 0;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+        .schedule{margin-top: 15px;}
+        .phone{
+            margin: 2px 0 -2px;
+            a{font-size: 40px;}
+        }
+        .btn{margin-top: 6px}
+        .navbar-toggle{
+            position: absolute;
+            top: -12px;
+            right: 44px;
+            border-radius: 0;
+            padding: 9px 16px 12px;
+            z-index: 10;
+            .icon-bar{
+                width: 36px;
+                height: 5px;
+                border-radius: 0;
+                +.icon-bar {margin-top: 7px;}
+            }
+        }
+    }
+    @media (max-width: @screen-xs-max) {
+        padding: 4px 0 25px;
+        >.container-fluid{display: block;}
+        .logo{padding-left: 17px;width: 175px;margin-bottom: -11px;}
+        .navbar-toggle{right: -2px;}
+        .contact{text-align: center;}
+        .schedule {
+            max-width: 100%;
+            dl{margin-left: 0; margin-bottom: 4px}
+        }
+
+    }
+}

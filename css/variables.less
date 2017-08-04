@@ -1,0 +1,71 @@
+/*переменные и миксины*/
+
+@font-face {
+    font-family: @font-WarnockPro;
+    src: url('../fonts/@{font-WarnockPro}-Regular.eot?') format('eot'),
+    url('../fonts/@{font-WarnockPro}-Regular.woff') format('woff'),
+    url('../fonts/@{font-WarnockPro}-Regular.ttf')  format('truetype'),
+    url('../fonts/@{font-WarnockPro}-Regular.svg#svgFontName') format('svg');
+    font-weight: 400;
+}
+@font-face {
+    font-family: @font-WarnockPro;
+    src: url('../fonts/@{font-WarnockPro}-Semibold.eot?') format('eot'),
+    url('../fonts/@{font-WarnockPro}-Semibold.woff') format('woff'),
+    url('../fonts/@{font-WarnockPro}-Semibold.ttf')  format('truetype'),
+    url('../fonts/@{font-WarnockPro}-Semibold.svg#svgFontName') format('svg');
+    font-weight: 900;
+}
+@font-face {
+    font-family: @font-WarnockPro;
+    src: url('../fonts/@{font-WarnockPro}-Light.eot?') format('eot'),
+    url('../fonts/@{font-WarnockPro}-Light.woff') format('woff'),
+    url('../fonts/@{font-WarnockPro}-Light.ttf')  format('truetype'),
+    url('../fonts/@{font-WarnockPro}-Light.svg#svgFontName') format('svg');
+    font-weight: 200;
+}
+@font-face {
+    font-family: @font-WarnockPro;
+    src: url('../fonts/@{font-WarnockPro}-It.eot?') format('eot'),
+    url('../fonts/@{font-WarnockPro}-It.woff') format('woff'),
+    url('../fonts/@{font-WarnockPro}-It.ttf')  format('truetype'),
+    url('../fonts/@{font-WarnockPro}-It.svg#svgFontName') format('svg');
+    font-weight: 400;
+    font-style: italic;
+}
+@font:   Arial;
+@font-WarnockPro: WarnockPro;
+@font-size:  14px;
+@font-width: 400;
+
+/*colors*/
+@color-red:         #ed1c24;
+@color-black:       #000;
+@color-navy:        #010e3b;
+@color-gray:        #eaeaea;
+
+
+/*screen*/
+@screen-lg: 1200px;
+@screen-md: 992px;
+@screen-sm: 768px;
+
+@screen-lg-min: @screen-lg - 1;
+@screen-md-min: @screen-md;
+@screen-md-max: @screen-lg-min;
+@screen-sm-min: @screen-sm;
+@screen-sm-max: @screen-md-min - 1;
+@screen-xs-max: @screen-sm-min - 1;
+@screen-xs-min: 320px;
+
+/*mixin*/
+.flex(@justify-content:center, @align-content:center, @align-items:stretch, @wrap: wrap){
+    display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
+    -webkit-flex-wrap: @wrap; -ms-flex-wrap: @wrap; flex-wrap: @wrap;
+    -webkit-justify-content: @justify-content; -ms-flex-pack: @justify-content; justify-content: @justify-content;
+    -webkit-align-items: @align-items; -ms-flex-align: @align-items; align-items: @align-items;
+    -webkit-align-content: @align-content; -ms-flex-line-pack: @align-content; align-content: @align-content;
+}
+.transition(@time:0.5s){
+    -webkit-transition: all @time;-moz-transition: all @time;-ms-transition: all @time;-o-transition: all @time;transition: all @time;
+}
